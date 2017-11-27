@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -32,7 +33,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     LatLng position1;
     SharedPreferences sharedPreferences;
     int locationCount;
-    Button delete;
+    //Button delete;
+    FloatingActionButton delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        delete = (Button) findViewById(R.id.btn1);
+        delete = (FloatingActionButton) findViewById(R.id.btn1);
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
